@@ -1,15 +1,19 @@
 {
-  "name": "@neokekeke/pkg2",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.6.0"
-  }
+    "name": "@neokekeke/pkg2",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "098278c76567e946b7840792b3b547ed74338e27"
 }

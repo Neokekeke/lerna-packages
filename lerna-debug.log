@@ -1,28 +1,123 @@
 0 silly argv {
-0 silly argv   _: [ 'version' ],
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
 0 silly argv   lernaVersion: '4.0.0',
 0 silly argv   '$0': 'C:\\Users\\HappyEveryDay\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js'
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\gitRepo\组件库\lerna-packages
 3 info versioning independent
-4 silly isAnythingCommitted
-5 verbose isAnythingCommitted 1
-6 silly getCurrentBranch
-7 verbose currentBranch main
-8 silly remoteBranchExists
-9 silly isBehindUpstream
-10 error Error: Command failed with exit code 1: git remote update
-10 error ssh_dispatch_run_fatal: Connection to 140.82.112.4 port 22: Software caused connection abort
-10 error fatal: Could not read from remote repository.
-10 error
-10 error Please make sure you have the correct access rights
-10 error and the repository exists.
-10 error error: Could not fetch origin
-10 error Fetching origin
-10 error     at makeError (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\lib\error.js:60:11)
-10 error     at Function.module.exports.sync (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\execa\index.js:194:17)
-10 error     at Object.execSync (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\child-process\index.js:39:16)
-10 error     at updateRemote (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\version\lib\is-behind-upstream.js:34:16)
-10 error     at isBehindUpstream (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\version\lib\is-behind-upstream.js:16:3)
-10 error     at VersionCommand.initialize (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\@lerna\version\index.js:153:9)
+4 verbose session 22cd31df48e79792
+5 verbose user-agent lerna/4.0.0/node@v14.16.0+x64 (win32)
+6 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
+7 verbose rootPath D:\gitRepo\组件库\lerna-packages
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch main
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream main is behind origin/main by 0 commit(s) and ahead by 0
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "pkg1@1.0.2-alpha.0-1-g299b39f" => {"lastTagName":"pkg1@1.0.2-alpha.0","lastVersion":"1.0.2-alpha.0","refCount":"1","sha":"299b39f","isDirty":false}
+18 info Looking for changed packages since pkg1@1.0.2-alpha.0
+19 silly checking diff packages/pkg1
+20 silly found diff in packages/pkg1/index.js
+21 verbose filtered diff [ 'packages/pkg1/index.js' ]
+22 silly checking diff packages/pkg2
+23 silly found diff in packages/pkg2/index.js
+24 verbose filtered diff [ 'packages/pkg2/index.js' ]
+25 verbose updated pkg1
+26 verbose updated pkg2
+27 verbose git-describe undefined => "pkg1@1.0.2-alpha.0-1-g299b39f"
+28 silly git-describe parsed => {"lastTagName":"pkg1@1.0.2-alpha.0","lastVersion":"1.0.2-alpha.0","refCount":"1","sha":"299b39f","isDirty":false}
+29 info execute Skipping releases
+30 silly lifecycle No script for "preversion" in "root", continuing
+31 silly lifecycle No script for "preversion" in "pkg2", continuing
+32 silly lifecycle No script for "version" in "pkg2", continuing
+33 silly lifecycle No script for "preversion" in "pkg1", continuing
+34 silly lifecycle No script for "version" in "pkg1", continuing
+35 silly lifecycle No script for "version" in "root", continuing
+36 silly gitAdd [
+36 silly gitAdd   'packages/pkg2/package.json',
+36 silly gitAdd   'packages/pkg2/package-lock.json',
+36 silly gitAdd   'packages/pkg1/package.json',
+36 silly gitAdd   'packages/pkg1/package-lock.json'
+36 silly gitAdd ]
+37 silly gitCommit Publish
+37 silly gitCommit
+37 silly gitCommit  - pkg1@1.0.3-alpha.0
+37 silly gitCommit  - pkg2@1.0.1
+38 verbose git [
+38 verbose git   'commit',
+38 verbose git   '-F',
+38 verbose git   'C:\\Users\\HAPPYE~1\\AppData\\Local\\Temp\\0c862b6d-1f9d-4995-8152-fdf65a580bdb\\lerna-commit.txt'
+38 verbose git ]
+39 silly gitTag pkg1@1.0.3-alpha.0
+40 verbose git [ 'tag', 'pkg1@1.0.3-alpha.0', '-m', 'pkg1@1.0.3-alpha.0' ]
+41 silly gitTag pkg2@1.0.1
+42 verbose git [ 'tag', 'pkg2@1.0.1', '-m', 'pkg2@1.0.1' ]
+43 silly lifecycle No script for "postversion" in "pkg1", continuing
+44 silly lifecycle No script for "postversion" in "pkg2", continuing
+45 silly lifecycle No script for "postversion" in "root", continuing
+46 info git Pushing tags...
+47 silly gitPush origin main
+48 info publish Publishing packages to npm...
+49 notice Skipping all user and access validation due to third-party registry
+50 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+51 warn ENOLICENSE Packages pkg1 and pkg2 are missing a license.
+51 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+51 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+52 silly getCurrentSHA
+53 verbose getCurrentSHA 0b157983999b7f197b7a2785203f0ea0df8191d2
+54 silly lifecycle No script for "prepublish" in "root", continuing
+55 silly lifecycle No script for "prepare" in "root", continuing
+56 silly lifecycle No script for "prepublishOnly" in "root", continuing
+57 silly lifecycle No script for "prepack" in "root", continuing
+58 verbose pack-directory packages\pkg2
+59 silly lifecycle No script for "prepublish" in "pkg2", continuing
+60 silly lifecycle No script for "prepare" in "pkg2", continuing
+61 silly lifecycle No script for "prepublishOnly" in "pkg2", continuing
+62 silly lifecycle No script for "prepack" in "pkg2", continuing
+63 silly lifecycle No script for "postpack" in "pkg2", continuing
+64 verbose packed packages\pkg2
+65 verbose pack-directory packages\pkg1
+66 silly lifecycle No script for "prepublish" in "pkg1", continuing
+67 silly lifecycle No script for "prepare" in "pkg1", continuing
+68 silly lifecycle No script for "prepublishOnly" in "pkg1", continuing
+69 silly lifecycle No script for "prepack" in "pkg1", continuing
+70 silly lifecycle No script for "postpack" in "pkg1", continuing
+71 verbose packed packages\pkg1
+72 silly lifecycle No script for "postpack" in "root", continuing
+73 verbose publish pkg2
+74 silly FetchError: request to https://registry.npmjs.orgaaa/pkg2 failed, reason: getaddrinfo ENOTFOUND registry.npmjs.orgaaa
+74 silly     at ClientRequest.<anonymous> (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:97:14)
+74 silly     at ClientRequest.emit (events.js:315:20)
+74 silly     at TLSSocket.socketErrorListener (_http_client.js:469:9)
+74 silly     at TLSSocket.emit (events.js:327:22)
+74 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+74 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+74 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21)
+74 silly  FetchError: request to https://registry.npmjs.orgaaa/pkg2 failed, reason: getaddrinfo ENOTFOUND registry.npmjs.orgaaa
+74 silly     at ClientRequest.<anonymous> (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:97:14)
+74 silly     at ClientRequest.emit (events.js:315:20)
+74 silly     at TLSSocket.socketErrorListener (_http_client.js:469:9)
+74 silly     at TLSSocket.emit (events.js:327:22)
+74 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+74 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+74 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+74 silly   code: 'ENOTFOUND',
+74 silly   errno: 'ENOTFOUND',
+74 silly   syscall: 'getaddrinfo',
+74 silly   hostname: 'registry.npmjs.orgaaa',
+74 silly   type: 'system'
+74 silly }
+75 error ENOTFOUND request to https://registry.npmjs.orgaaa/pkg2 failed, reason: getaddrinfo ENOTFOUND registry.npmjs.orgaaa
+76 error FetchError: request to https://registry.npmjs.orgaaa/pkg2 failed, reason: getaddrinfo ENOTFOUND registry.npmjs.orgaaa
+76 error     at ClientRequest.<anonymous> (C:\Users\HappyEveryDay\AppData\Roaming\npm\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:97:14)
+76 error     at ClientRequest.emit (events.js:315:20)
+76 error     at TLSSocket.socketErrorListener (_http_client.js:469:9)
+76 error     at TLSSocket.emit (events.js:327:22)
+76 error     at emitErrorNT (internal/streams/destroy.js:106:8)
+76 error     at emitErrorCloseNT (internal/streams/destroy.js:74:3)

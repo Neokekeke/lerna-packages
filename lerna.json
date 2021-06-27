@@ -6,7 +6,7 @@
     "command": {
         "publish": {
             "skipGit": true,
-            "registry": "https://registry.npmjs.orgaaa/"
+            "registry": "https://registry.npmjs.org/"
         }
     }
 }

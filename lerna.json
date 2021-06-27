@@ -1,6 +1,12 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+    "packages": [
+        "packages/*"
+    ],
+    "version": "independent",
+    "command": {
+        "publish": {
+            "skipGit": true,
+            "registry": "https://registry.npmjs.orgaaa/"
+        }
+    }
 }
